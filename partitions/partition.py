@@ -23,6 +23,12 @@ class Partition:
             return "FAT-32 (LBA)"
         elif self.partition_type == 0x0E:
             return "FAT-16 (LBA)"
+        elif self.partition_type == 0x82:
+            return "LINUX SWAP"
+        elif self.partition_type == 0x83:
+            return "LINUX NATIVE"
+        elif self.partition_type == 0x85:
+            return "LINUX EXTENDED"
         else:
             return "NOT-DECODED"
 
